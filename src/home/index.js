@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from 'react'
-import List from '../globalComponents/List'
-import service from '../services'
-import logo_fit from '../img/logo-fit.png'
-
 import swal from 'sweetalert2'
+import service from '../services'
+import Header from '../global/header'
+import List from '../global/list'
+import Footer from '../global/footer'
 
 const objService = new service();
 
@@ -25,13 +25,9 @@ const HomeView = () => {
 
     return (
         <div>
-            <div className="container">
-                <div className="titulo">Proyectos Data Factory</div>
-                <img className="logo-titulo" src={logo_fit} alt="Logo FIT"></img>
-            </div>
-            <div className="container-list">
-                { proyectos.length > 0 ? <List context={"/proyectos"} list={proyectos}/> : null } 
-            </div>
+            <Header />
+            { proyectos.length > 0 ? <List context={"/proyectos"} list={proyectos}/> : null }
+            <Footer />
         </div>
     )
 }

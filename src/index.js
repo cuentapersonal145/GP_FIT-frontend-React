@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import reportWebVitals from './reportWebVitals';
-import App from './AppRoutes';
+import reportWebVitals from './test/reportWebVitals';
+import Routes from './routes';
 
 import './index.css';
 
@@ -11,7 +11,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Routes />
   </React.StrictMode>
 );
 

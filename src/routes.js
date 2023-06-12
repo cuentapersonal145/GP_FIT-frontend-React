@@ -4,11 +4,9 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-// import HomeView from './home';
-// import Product from './product';
 import HomeView from './home';
 
-function App() {
+function routes() {
   return (
     <Router>
       <Routes>
@@ -20,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default routes;
