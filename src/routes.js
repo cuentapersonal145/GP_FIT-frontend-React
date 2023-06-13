@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import HomeView from './home';
+import E404 from './error/404';
 import Proyectos from './proyectos';
 import Actividades from './proyectos/actividades';
 
@@ -15,7 +16,7 @@ function routes() {
         <Route exact path="/" element={ <HomeView /> } />
         <Route exact path="/servicio/:id/:nombre" element={ <Proyectos /> } />
         <Route exact path="/servicio/:id_servicio/:nombre/proyecto_servicio/:id/:nombre_proyecto" element={ <Actividades /> } />
-        <Route path="*" element={"ERROR 404"} />
+        <Route path="*" element={ <E404/> } />
       </Routes>
     </Router>
   );
