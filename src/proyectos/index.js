@@ -32,7 +32,7 @@ const Proyectos = () => {
     return (
         <div>
             <Header titulo={capitalizeFirstLetter("requerimientos")} subtitulo={nombre}/>
-            { elements.length > 0 ? <List context={"/servicio/" + id + "/" + nombre + "/proyecto"} list={elements}/> : null }
+            { elements.length > 0 ? <List context={"/servicio/" + id + "/" + nombre + "/proyecto_servicio"} list={elements}/> : null }
             <Footer />
         </div>
     )

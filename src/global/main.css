@@ -104,6 +104,32 @@
     font-weight: bold;
 }
 
+/* list2.js */
+.description-container {
+    display: flex;
+}
 
 
 /* -webkit-text-stroke: 0.7px black; */
+.container {
+    padding: 15px 30px;
+}
+
+.titulo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sub-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description-container {
+    font-size: 16px;
+}
+
+.main-element {
+    font-weight: bold;
+}

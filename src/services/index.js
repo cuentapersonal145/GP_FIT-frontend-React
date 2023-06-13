@@ -12,4 +12,9 @@ export default class service {
         const url = `${API_URL}/app/api/servicio/` + id + `/proyectos/`;
         return axios.get(url);
     }
+
+    get_actividades_service(id) {
+        const url = `${API_URL}/app/api/proyecto_servicio/` + id + `/actividades/`;
+        return axios.get(url);
+    }
 }
