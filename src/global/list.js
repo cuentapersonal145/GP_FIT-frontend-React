@@ -9,12 +9,15 @@ const list = (props) => {
             { props.list.map(
                 element => (
                     <Link 
-                        to={props.context + "/" + element.id} 
+                        to={props.context + "/" + element.id + "/" + element.nombre} 
                         key={element.id}
-                        className="card-list" 
+                        className="card-container" 
                     >
-                        <div className="name-element-container">
-                            <p> {element.nombre} </p>
+                        <div className="description-card-container">
+                            <div>
+                                <div className='description-card'> {element.nombre} </div>
+                                { element.nombre_tipo ? <div className='description2-card'> [ {element.nombre_solicitud} : {element.nombre_tipo} ] </div> : null}
+                            </div>
                         </div>
                     </Link>
                 )

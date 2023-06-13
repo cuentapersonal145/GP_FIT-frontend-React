@@ -2,31 +2,31 @@ import { React, useEffect, useState } from 'react'
 import swal from 'sweetalert2'
 import service from '../services'
 import Header from '../global/header'
-import List from '../global/list'
 import Footer from '../global/footer'
+import List from '../global/list'
 
 const objService = new service();
 
 const HomeView = () => {
 
-    const [proyectos, setProyectos] = useState([]);
+    const [elements, setElements] = useState([]);
     
     useEffect(() => {
-        objService.get_proyectos_service().then((result) => {
-            setProyectos(result.data);
+        objService.get_servicios_service().then((result) => {
+            setElements(result.data);
         }).catch(() => {
-            swal.fire(
-                'Ups ¡Error!',
-                'Fue al tratar de obtener los proyectos. Puede deberse a una inactividad del servidor proveedor. Deberias intentar mas tarde o consultarlo con el administrador',
-                'error'
-            );
+            swal.fire({
+                title: 'Ups ¡Error!',
+                html: '<div style="text-align: justify;">Ocurrio al tratar de obtener los proyectos. Puede deberse a una inactividad del servidor proveedor. Deberias intentar mas tarde o consultarlo con el administrador</div>',
+                icon: 'error'
+            });
         });
     }, []);
 
     return (
         <div>
-            <Header />
-            { proyectos.length > 0 ? <List context={"/proyectos"} list={proyectos}/> : null }
+            <Header titulo={"Servicios Data Factory"} />
+            { elements.length > 0 ? <List context={"/servicio"} list={elements}/> : null }
             <Footer />
         </div>
     )
