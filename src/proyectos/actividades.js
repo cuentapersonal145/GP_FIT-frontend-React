@@ -27,7 +27,7 @@ const Actividades = () => {
 
     return (
         <div>
-            <Header titulo={"Actividades en Proyectos"} subtitulo={nombre}/>
+            <Header titulo={"Actividades en Proyectos"} subtitulo={nombre} />
             { elements.length > 0 ? <List2 data={elements[0]}/> : null }
             <Footer />
         </div>

@@ -25,7 +25,7 @@ const HomeView = () => {
 
     return (
         <div>
-            <Header titulo={"Servicios Data Factory"} />
+            <Header titulo={"Clientes - Solicitudes - Data Factory"} />
             { elements.length > 0 ? <List context={"/servicio"} list={elements}/> : null }
             <Footer />
         </div>
